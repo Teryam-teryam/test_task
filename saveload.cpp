@@ -10,7 +10,7 @@ void SaveLoad::load_from_file(const std::string& filename)
 			size_t position = line.find(' ');		//позиция символа-разделителя
 			std::string short_url = line.substr(0,position);
 			std::string orign_url = line.substr(position+1);
-			map_url[short_url] = origin_url;
+			map_url[short_url] = orign_url;
 		}
 	file_for_load.close();
 }
@@ -18,7 +18,7 @@ void SaveLoad::save_to_file(const std::string& filename)
 {
 	std::ofstream file_for_save(filename);
 	//добавить проверку на правильное открытие
-	for (const std::pair<std::string, std::string>& short_orign_pair : url_map)
+	for (const std::pair<std::string, std::string>& short_orign_pair : map_url)
 		{
 			file_for_save << short_orign_pair.first << " " << short_orign_pair.second << "\n";
 		}
