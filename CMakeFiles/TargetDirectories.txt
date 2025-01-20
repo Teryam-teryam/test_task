@@ -1,0 +1,3 @@
+/home/stud/test_task/CMakeFiles/url_shortener.dir
+/home/stud/test_task/CMakeFiles/edit_cache.dir
+/home/stud/test_task/CMakeFiles/rebuild_cache.dir
